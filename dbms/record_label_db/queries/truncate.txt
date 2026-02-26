@@ -1,0 +1,10 @@
+TRUNCATE TABLE 
+    track_streams,
+    royalties,
+    payments,
+    tracks,
+    contracts,
+    albums,
+    streaming_platforms,
+    artists
+RESTART IDENTITY CASCADE;

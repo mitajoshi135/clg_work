@@ -1,0 +1,95 @@
+INSERT INTO artists (stage_name, legal_name, country, debut_year, artist_type) VALUES
+('Aarav Blaze', 'Aarav Sharma', 'India', 2015, 'Solo'),
+('Neon Waves', NULL, 'USA', 2012, 'Band'),
+('Luna Star', 'Priya Verma', 'UK', 2018, 'Solo'),
+('Echo Pulse', NULL, 'Canada', 2010, 'Band'),
+('Riya Rhythm', 'Riya Patel', 'India', 2020, 'Solo'),
+('Silver Chords', NULL, 'Australia', 2008, 'Band'),
+('DJ Zenith', 'Karan Mehta', 'India', 2016, 'Solo'),
+('The Vortex', NULL, 'USA', 2005, 'Band'),
+('Maya Soul', 'Maya Nair', 'India', 2019, 'Solo'),
+('Crimson Sky', NULL, 'UK', 2011, 'Band');
+
+INSERT INTO albums (artist_id, album_title, release_date, album_type, total_tracks) VALUES
+(1, 'Burning Beats', '2016-06-10', 'Studio', 10),
+(2, 'Ocean Drive', '2013-09-15', 'Studio', 8),
+(3, 'Moonlight EP', '2019-03-20', 'EP', 5),
+(4, 'Pulse Live', '2012-11-01', 'Live', 12),
+(5, 'Rhythm Rise', '2021-07-22', 'Studio', 9),
+(6, 'Golden Strings', '2009-04-18', 'Studio', 11),
+(7, 'Night Bass', '2017-08-30', 'Single', 1),
+(8, 'Storm Front', '2006-02-14', 'Studio', 13),
+(9, 'Soul Echo', '2020-10-05', 'EP', 6),
+(10, 'Red Horizon', '2012-12-12', 'Studio', 10);
+
+INSERT INTO contracts (artist_id, start_date, end_date, contract_type, royalty_rate) VALUES
+(1, '2015-01-01', '2020-12-31', 'Exclusive', 15.50),
+(2, '2012-05-01', NULL, 'Exclusive', 18.00),
+(3, '2018-01-10', '2022-01-09', 'Non-Exclusive', 12.75),
+(4, '2010-06-15', NULL, 'Exclusive', 20.00),
+(5, '2020-02-01', NULL, 'Non-Exclusive', 10.00),
+(6, '2008-03-01', '2015-03-01', 'Exclusive', 17.25),
+(7, '2016-07-01', NULL, 'Exclusive', 22.00),
+(8, '2005-01-01', '2015-12-31', 'Exclusive', 19.00),
+(9, '2019-04-01', NULL, 'Non-Exclusive', 11.50),
+(10, '2011-09-01', '2018-09-01', 'Exclusive', 16.75);
+
+INSERT INTO payments (artist_id, amount, payment_date, payment_method) VALUES
+(1, 5000.00, '2023-01-15', 'Bank Transfer'),
+(2, 7500.50, '2023-02-10', 'Cheque'),
+(3, 3200.75, '2023-03-05', 'UPI'),
+(4, 8800.00, '2023-01-20', 'Bank Transfer'),
+(5, 1500.00, '2023-04-12', 'UPI'),
+(6, 6400.40, '2023-02-18', 'Cheque'),
+(7, 9200.00, '2023-05-25', 'Bank Transfer'),
+(8, 7100.60, '2023-06-30', 'Cheque'),
+(9, 2800.00, '2023-07-14', 'UPI'),
+(10, 6600.90, '2023-08-01', 'Bank Transfer');
+
+INSERT INTO tracks (album_id, track_title, duration_seconds, is_single) VALUES
+(1, 'Firestorm', 210, TRUE),
+(2, 'Deep Blue', 195, TRUE),
+(3, 'Lunar Light', 180, FALSE),
+(4, 'Heartbeat Live', 240, FALSE),
+(5, 'Rise Up', 200, TRUE),
+(6, 'String Theory', 230, FALSE),
+(7, 'Midnight Drop', 175, TRUE),
+(8, 'Thunder Roll', 250, FALSE),
+(9, 'Inner Voice', 205, FALSE),
+(10, 'Scarlet Dreams', 220, TRUE);
+
+INSERT INTO streaming_platforms (platform_name) VALUES
+('Spotify'),
+('Apple Music'),
+('Amazon Music'),
+('YouTube Music'),
+('JioSaavn'),
+('Gaana'),
+('Wynk'),
+('Tidal'),
+('Deezer'),
+('SoundCloud');
+
+INSERT INTO track_streams (track_id, platform_id, stream_count, report_month) VALUES
+(1, 1, 100000, '2023-01-01'),
+(2, 2, 85000, '2023-01-01'),
+(3, 3, 64000, '2023-01-01'),
+(4, 4, 92000, '2023-01-01'),
+(5, 5, 50000, '2023-01-01'),
+(6, 6, 30000, '2023-01-01'),
+(7, 7, 45000, '2023-01-01'),
+(8, 8, 70000, '2023-01-01'),
+(9, 9, 38000, '2023-01-01'),
+(10, 10, 60000, '2023-01-01');
+
+INSERT INTO royalties (contract_id, track_id, royalty_amount, royalty_date) VALUES
+(1, 1, 1500.00, '2023-01-31'),
+(2, 2, 1800.00, '2023-01-31'),
+(3, 3, 900.00, '2023-01-31'),
+(4, 4, 2000.00, '2023-01-31'),
+(5, 5, 500.00, '2023-01-31'),
+(6, 6, 1100.00, '2023-01-31'),
+(7, 7, 2100.00, '2023-01-31'),
+(8, 8, 1750.00, '2023-01-31'),
+(9, 9, 600.00, '2023-01-31'),
+(10, 10, 1400.00, '2023-01-31');

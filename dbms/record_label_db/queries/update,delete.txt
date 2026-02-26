@@ -1,0 +1,17 @@
+DELETE FROM track_streams
+WHERE track_id = 10;
+
+DELETE FROM royalties
+WHERE track_id = 10;
+
+DELETE FROM tracks
+WHERE track_id = 10;
+
+UPDATE tracks
+SET duration_seconds = duration_seconds + 30,
+    is_single = TRUE
+WHERE track_id = 10;
+
+UPDATE track_streams
+SET stream_count = stream_count + 5000
+WHERE track_id = 10;

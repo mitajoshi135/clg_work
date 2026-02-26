@@ -1,0 +1,7 @@
+SELECT t.track_id,
+       t.track_title,
+       SUM(ts.stream_count) AS total_streams
+FROM tracks t
+JOIN track_streams ts ON t.track_id = ts.track_id
+GROUP BY t.track_id, t.track_title
+HAVING SUM(ts.stream_count) > 50000;
